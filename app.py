@@ -1,3 +1,4 @@
+
 from __future__ import annotations
 
 import base64
@@ -111,7 +112,7 @@ def load_and_train():
     prec, rec, _ = precision_recall_curve(y_test, proba_test)
 
     rf = RandomForestClassifier(
-        n_estimators=200, min_samples_leaf=2,
+        n_estimators=50, min_samples_leaf=2,
         class_weight="balanced", n_jobs=-1, random_state=RANDOM_STATE,
     )
     rf.fit(X_train_p, y_train)
